@@ -1,0 +1,3 @@
+[submodule "version-proxy"]
+	path = version-proxy
+	url = https://github.com/nourlie/GlyphCore-Private.git

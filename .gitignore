@@ -26,5 +26,3 @@ Thumbs.db
 # Reverse-engineering scratch scripts (the cracked algorithms live in the Rust sources)
 /*.py
 /rc4_out.txt
-version-proxy/
-version-proxy/
