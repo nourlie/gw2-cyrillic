@@ -1,0 +1,66 @@
+name: Проблема / краш
+description: Игра не запускается, вылетает, или мод работает не так, как должен
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Перед тем как отправить, обязательно приложите `version_proxy_log.txt`. Без него разобраться в проблеме почти невозможно.
+        Файл лежит в `Guild Wars 2\glyphCore\version_proxy_log.txt`.
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия GlyphCore
+      description: Видна внизу окна оверлея (клавиша Insert в игре) или в имени скачанного файла
+      placeholder: "например v0.1.26"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло
+      description: Опишите проблему как можно подробнее, что делали, что ожидали, что получили
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      description: Шаги, после которых проблема воспроизводится (если применимо)
+    validations:
+      required: false
+
+  - type: textarea
+    id: log
+    attributes:
+      label: version_proxy_log.txt
+      description: >
+        Перетащите файл version_proxy_log.txt прямо в это поле (не вставляйте текстом, GitHub сам
+        прикрепит файл и подставит сюда ссылку). Путь: Guild Wars 2\glyphCore\version_proxy_log.txt.
+      placeholder: "Перетащите файл сюда..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dump
+    attributes:
+      label: "Crash.dmp (если игра крашнулась, а не просто не запустилась)"
+      description: >
+        Если в папке игры (Guild Wars 2\Crash.dmp или bin64\Crash.dmp) есть файл дампа,
+        заархивируйте его в .zip (GitHub не принимает .dmp напрямую) и прикрепите архив сюда.
+        Если дампа нет, оставьте поле пустым.
+      placeholder: "Перетащите .zip с дампом сюда, если он есть..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверка
+      options:
+        - label: Я приложил(а) version_proxy_log.txt выше
+          required: true
